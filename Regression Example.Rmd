@@ -1,0 +1,24 @@
+---
+title: "Regression Example"
+author: "Andrew L. Stewart"
+date: "May 1, 2016"
+output: pdf_document
+---
+
+#Create data
+```{r}
+x<-rnorm(100)
+y<-rnorm(100,2,.5)+x
+```
+
+#Run regression analysis
+```{r}
+xy.reg<-lm(y~x)
+summary(xy.reg)
+```
+
+#Plot with regression line
+```{r}
+plot(x,y)
+abline(xy.reg)
+```
