@@ -8,4 +8,8 @@ output: html_document
 #Install and Load Packages
 ```{r}
 install.packages("meta",dependencies = TRUE)
+install.packages("metafor",dependencies = TRUE)
+install.packages("rmeta",dependencies = TRUE) #not sure if we need this
+library(meta,metafor)
 ```
+
