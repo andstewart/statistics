@@ -1,0 +1,11 @@
+---
+title: "Meta-Analysis Example"
+author: "Andrew L. Stewart"
+date: "May 3, 2016"
+output: html_document
+---
+
+#Install and Load Packages
+```{r}
+install.packages("meta",dependencies = TRUE)
+```
