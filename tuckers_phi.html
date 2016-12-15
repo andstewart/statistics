@@ -122,12 +122,14 @@ $(document).ready(function () {
 
 <div id="define-factor-loadings-vectors" class="section level2">
 <h2>Define factor loadings vectors</h2>
-<pre><code>x&lt;-c(.32,.43,.65,.55)
+<pre class="r"><code>x&lt;-c(.32,.43,.65,.55)
 y&lt;-c(.34,.54,.67,.44)</code></pre>
 </div>
 <div id="tuckers-phi" class="section level2">
 <h2>Tucker’s Phi</h2>
-<pre><code>sum(x,y)/sqrt(sum(x^2)*sum(y^2))</code></pre>
+<pre class="r"><code>phi=sum(x*y)/sqrt(sum(x^2)*sum(y^2))
+phi</code></pre>
+<pre><code>## [1] 0.9880384</code></pre>
 </div>
 
 
