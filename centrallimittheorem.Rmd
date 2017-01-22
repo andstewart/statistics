@@ -1,0 +1,27 @@
+---
+title: "Central Limit Theorem"
+author: "Andrew L. Stewart"
+date: "1/22/2017"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+x<-rgamma(100,1)
+hist(x)
+y<-rbeta(100,.5,.5)
+hist(y)
+z<-x+y
+hist(z)
+r<-rgamma(100,2)
+s<-rbeta(100,.1,.1)
+z<-x+y+r+s
+hist(z)
+t<-rgamma(100,3)
+u<-rbeta(100,.3,.3)
+z<-x+y+r+s+t+u
+hist(z)
+```

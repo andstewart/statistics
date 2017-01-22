@@ -1,0 +1,31 @@
+---
+title: ""
+author: ""
+date: ""
+output: pdf_document
+---
+
+# What Do Men Think about Pornography, Men's Magazines, and Gender?
+
+## Study Description
+
+While taboo in many contexts to discuss publicly, many people view pornographic material during their lives. People may consume pornography for many reasons, and while people of many different genders consume pornography, some theories and research argue that men's consumption of pornography can have negative consequences, such as sexual health problems (e.g., erectile dysfunction), objectifying attitudes toward women, and more distally, perpetration of sexual assault.
+
+The present study sought to understand how men think about pornography, how much they consume pornography, and how they think about gender. Using this dataset, we may learn more about the reasons that men consume pornography.
+
+## Analyses
+
+1. Open the data file (called Hegarty Men's Magazines 2016 Study 3). Explore the data file. Note, you will not analyze all of these variables.
+
+2. Describe the characteristics of this sample, in terms of age, ethnicity, and socioeconomic status.
+
+3. Calculate descriptive statistics for men's consumption of pornography, and report three measures of central tendency, the standard deviation, and minimum/maximum for this variable.
+
+4. Calculate descriptive statistics for men's attitudes toward pornography (pornharm, pornvio, porngood), and report three measures of central tendency, the standard deviation, and minimum/maximum for these variables.
+
+5. Calculate descriptive statistics for men's endorsement of hostile sexism (hs), and report three measures of central tendency, the standard deviation, and minimum/maximum for this variable.
+
+6. Write a description of the analyses you ran, summarizing men's pornography consumption, attitudes toward pornography, and negative attitudes toward women. How do men generally think about pornography? Do you think these men's pornography consumption is harmful or helpful? What are some limitations of this sample that may produce statistical errors?
+
+## DUE: FEBRUARY 3, 2017 at 3PM
+### Upload your responses to the questions and any requested tables/figures, along with your output in one file to Moodle.
