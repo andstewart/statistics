@@ -1,0 +1,35 @@
+---
+title: ""
+author: ""
+date: ""
+output: pdf_document
+---
+
+# What Do Men Think about Pornography, Men's Magazines, and Gender? (Part 2)
+
+## Study Description
+
+While taboo in many contexts to discuss publicly, many people view pornographic material during their lives. People may consume pornography for many reasons, and while people of many different genders consume pornography, some theories and research argue that men's consumption of pornography can have negative consequences, such as sexual health problems (e.g., erectile dysfunction), objectifying attitudes toward women, and more distally, perpetration of sexual assault.
+
+The present study sought to understand how men think about pornography, how much they consume pornography, and how they think about gender. Using this dataset, we may learn more about the reasons that men consume pornography.
+
+## Analyses
+
+1. Open the data file (called Hegarty Men's Magazines 2016 Study 3). Explore the data file. Note, you will not analyze all of these variables.
+
+2. Create a scatterplot matrix for the following variables: pornography use (pornuse), belief that pornography is harmful (pornharm), belief that pornography is good (porngood), belief that pornography leads to sexual violence (pornvio), and hostile sexism, or negative attitudes toward women (hs).
+
+3. Calculate a correlation matrix for the following variables: pornography use (pornuse), belief that pornography is harmful (pornharm), belief that pornography is good (porngood), belief that pornography leads to sexual violence (pornvio), and hostile sexism, or negative attitudes toward women (hs).
+
+4. Create a single scatterplot between pornography use and hostile sexism. Add a line of best fit to the scatterplot, and estimate the regression line.
+
+5. Create a single scatterplot between the belief that pornography is good and hostile sexism. Add a line of best fit to the scatterplot, and estimate the regression line.
+
+6. Standardize the following variables: pornography use (pornuse), belief that pornography is harmful (pornharm), belief that pornography is good (porngood), belief that pornography leads to sexual violence (pornvio), and hostile sexism, or negative attitudes toward women (hs).
+
+7. Calculate the correlation matrix for the standardized variables your created in Step 6.
+
+8. Write an interpretation of the analyses you completed. Interpret the relationships among hostile sexism and the different pornography variables, interpret the slopes of the regression lines, and describe how standardization affects the correlations among the variables. What do you believe is the nature of the relationships among hostile sexism, pornography use, and different beliefs about pornography?
+
+## DUE: FEBRUARY 10, 2017 at 3PM
+### Upload your interpretation and requested figures/tables, along with your output in one file to Moodle.
