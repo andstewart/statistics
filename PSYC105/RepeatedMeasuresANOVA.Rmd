@@ -1,0 +1,33 @@
+---
+title: ""
+author: ""
+date: ""
+output: pdf_document
+---
+
+# Does movement within a virtual-reality environment affect the real-world onset of pain?
+
+## Study Description
+
+In the movie The Matrix, the main character, Neo, enters a virtual-reality world in which he can jump long distances, move at high speeds, and dodge bullets. But there is a catch. If he gets injured in the virtual world, Neo’s body experiences pain in the real world. Is it really possible for movement within a virtual reality environment to affect individuals’ perception of pain?
+
+A study by Harvie et al., (2015) sought to test a non-Hollywood version of the hypothesis that virtual proprioceptive-visual feedback (i.e., visual information about the body in space) can affect pain perception. The authors argue that if pain serves as a warning system to protect the body from potential damage, then virtual-reality based visual feedback that suggests potential damage to the body should reduce the threshold at which people experience pain.
+
+To test this hypothesis, the authors recruited participants who suffered from a moderate level of neck pain. All participants viewed a series of six scenes through virtual-reality display goggles while sitting in a chair (to keep their bodies stationary, such that participants could only view the scenes by rotating their necks). The experimenters then manipulated the amount of rotation feedback that virtual-reality system provided the participants. During two of the scenes, the virtual-reality system provided accurate visual feedback. During two other scenes, the virtual-reality system reduced the amount of virtual rotation by 20% (understated visual feedback condition). Finally, during the two remaining scenes, the virtual-reality system amplified the amount of virtual rotation by 20% (overstated visual feedback condition). Participants stopped turning their heads at the point at which they experienced pain in their necks. The researchers measured the degrees of rotation (left or right) that participants turned their heads before the onset of pain.
+
+## Analyses
+
+1. Open the data file (called Harvie et al 2015 Data Set).
+
+2. Calculate the means and standard deviations for the three feedback conditions.
+
+3. Conduct an analysis to determine if there is an effect of condition (the type of virtual rotation feedback) on range of motion at onset of pain.
+
+4. If there is a significant effect found in #3, conduct pairwise comparisons with Bonferroni corrections to determine which of the conditions are different from each other.
+
+5. Prepare an APA-style results section for the analyses you completed.
+
+6. Prepare a figure depicting the mean range of motion at onset of pain by condition. Include error bars that represent the 95% confidence intervals for each condition. Make sure to follow APA-style guidelines.
+
+## DUE: March 31, 2017 at 3PM
+### Upload your APA style results section and any requested tables/figures, along with your output in one file to Moodle.
