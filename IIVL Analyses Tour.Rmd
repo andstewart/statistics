@@ -1,0 +1,61 @@
+---
+title: "IIVL Analyses Tour"
+author: "Andrew L. Stewart"
+date: "4/4/2017"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Import Data
+
+```{r}
+cdi.dat <- read.csv("cdi.csv",header=T,na.strings = c("-99","99"))
+attach(cdi.dat)
+names(cdi.dat)
+```
+
+# Descriptives
+
+```{r}
+summary(cdi.dat)
+sapply(cdi.dat, mean, na.rm=TRUE)
+sapply(cdi.dat, sd, na.rm=TRUE)
+cor(cdi.dat,use="complete.obs")
+```
+
+# ANOVA
+
+```{r}
+cdi.aov <- aov(arab~as.factor(country))
+summary(cdi.aov)
+TukeyHSD(cdi.aov)
+```
+
+# Regression
+
+```{r}
+cdi.reg <- lm(collact~anger+eff+id)
+summary(cdi.reg)
+plot(cdi.reg)
+```
+
+# Structural Equation Modeling
+
+```{r}
+library(lavaan)
+library(semPlot)
+
+path.model <- '
+  # regressions
+    collact ~ anger + eff + arab + sdo + id
+    anger ~ sdo + id
+    eff ~ sdo + id
+    arab ~ sdo + id
+'
+path.fitted<-sem(path.model, data=cdi.dat, fixed.x=FALSE)
+summary(path.fitted, fit.measures=TRUE, standardized=TRUE)
+semPaths(path.fitted)
+```
