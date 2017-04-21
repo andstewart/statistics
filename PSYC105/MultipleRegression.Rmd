@@ -1,0 +1,38 @@
+---
+title: ''
+author: ''
+date: ''
+output:
+  pdf_document: default
+  html_document: default
+  word_document: default
+---
+
+# Do experts overrate the extent of their expertise?
+
+## Study Description
+
+Valuing expertise is important for modern life. When people have a problem, they need to know who to turn to for a solution to their problem. For example, when people get sick, they know that a doctor is an expert in the field of medicine and can help them get better. In general, experts simply know more about a topic than do non-experts. However, experts may be vulnerable to a particular problem of knowing so much. They may have the illusion that they know more about a topic than they actually do.
+
+This particular type of overconfidence is called overclaiming. Essentially, overclaiming occurs when people claim that they know something that is impossible to know, such as claiming to know the capital of Sharambia (a country that doesn’t actually exist).
+
+To test if experts are susceptible to overclaiming, Atir, Rosenzweig, and Dunning (2015) recruited 202 individuals from an online participant pool. They first asked participants to complete either a measure of self-perceived knowledge, or an overclaiming task (to test for a possible order effect, half of the participants completed the measure of perceived knowledge first, whereas the other half completed the overclaiming task first). The self-perceived knowledge questionnaire asked people to indicate their level of knowledge in the area of personal finance. The overclaiming task asked participants to indicate how much they knew about 15 terms related to personal finance (e.g., home equity). Included in the 15 items were three terms that do not actually exist (e.g., annualized credit). Thus, overclaiming occurred when participants said that they were knowledgeable about the non-existent terms. Finally, participants completed a test of financial literacy called the FINRA. Whereas the earlier questionnaires measured self-perceived knowledge, the FINRA measured actual knowledge.
+
+## Analyses
+
+1. Open the data file (called Atir Rosenzweig Dunning 2015 Study 1b).
+
+2. First, calculate means and standard deviations for overclaiming.
+
+3. You next want to examine the relationship between self-perceived knowledge and overclaiming. You also want to take into account the accuracy with which participants responded during the overclaiming task (that is the ability of people to distinguish between the 12 real terms and the 3 fake terms). Conduct an analysis that uses both self-perceived knowledge and accuracy to predict overclaiming.
+
+4. You next want to determine whether there is an order effect (based on whether participants completed the self-perceived knowledge measure first, or the overclaiming task first. Compare the mean level of overclaiming based on the order of the tasks.
+
+5. If you found a significant difference in overclaiming in the analysis above (#4), re-perform the analysis from #3 to check to see if the relationship between self-perceived knowledge and overclaiming changes, when taking into account the order of the tasks. To do this, use the split file function, splitting the file based on order condition, before re-performing the analyses from #3. After you have performed the analyses, make sure to turn split file off.
+
+6. You next want to determine if the self-perceived knowledge still predicts overclaiming while accounting for the variance due to genuine expertise, as measured by the FINRA. First, find the mean and standard deviation for scores on the FINRA. Then, re-perform the analysis from #3, but this time include scores on the FINRA as an additional predictor variable.
+
+7. Prepare an APA-style results section for the analyses you completed.
+
+## DUE: April 21, 2017 at 3PM
+### Upload your APA style results section and any requested tables/figures, along with your output in one file to Moodle.
