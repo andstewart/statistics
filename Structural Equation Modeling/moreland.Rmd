@@ -1,0 +1,59 @@
+---
+title: 'Homework Day 2: CFA'
+author: "Andrew Stewart"
+date: "June 6, 2017"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Use lavaan package
+
+```{r}
+library(lavaan)
+```
+
+# Read in the data
+
+```{r}
+  moreland.dat <- '
+  1	    
+-.008	1	    
+.11	    .482	1	    
+.454	.128	.335	1	    
+.396	.101	.293	.736	1	    
+.351	.09	    .293	.675	.849	1	    
+.231	.082	.287	.559	.662	.687	1	    
+.317	.048	.269	.667	.653	.638	.579	1	
+.296	.071	.267	.562	.634	.662	.609	.535	1	
+.353	.065	.255	.477	.593	.634	.49	    .5	    .558	1	
+.142	.055	.273	.468	.55	    .601	.713	.533	.555	.491	1'
+
+moreland.cov <- getCov(moreland.dat, names = c("nvisits", "seen", "familiar", "attrac", "befriend", "enjoy", "work", "simil", "back", "under", "simplan"))
+moreland.cov
+```
+
+# Specify Model
+
+```{r}
+# latent variables
+
+Moreland.Model <- '
+acquaint =~ seen + familar
+attract =~ attrac + befriend + enjoy + work
+similar =~ simil + back + under + simplan
+
+acquaint ~ nvisits
+attract ~ nvisits
+similar ~ nvisits
+'
+```
+
+# Fit the CFA
+
+```{r}
+moreland.fit <- cfa(Moreland.Model, sample.cov = moreland.cov, sample.nobs=388)
+summary(moreland.fit, fit.measures=TRUE, standardized = TRUE)
+```

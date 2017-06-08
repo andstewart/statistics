@@ -1,0 +1,41 @@
+---
+title: "Multiple Groups Latent Variable Models"
+author: "Andrew L. Stewart"
+date: "June 8, 2017"
+output:
+  html_document: default
+  word_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Read the data
+```{r}
+multigroup.dat <- read.table("C:/Users/NeagStats22/Desktop/DATIC SEM 2017/Student Files DATIC SEM 2017/Day 4/HMK4/HMK_MGCFA.dat")
+names(multigroup.dat)<-c("math1","math2","math3","read1","read2","read3","iq","selfreg","value","gender")
+attach(multigroup.dat)
+library(lavaan)
+library(semPlot)
+```
+
+# Specify the model
+```{r}
+  model <- '
+            #Measurement model
+            math =~ math1+math2+math3
+            read =~ read1+read2+read3
+            
+            #regressions
+            math~iq+selfreg+value
+            read~iq+selfreg+value
+'
+```
+
+# Fit the model
+```{r}
+fit<-cfa(model,meanstructure=TRUE,group="gender",group.equal="loadings",data=multigroup.dat)
+summary(fit,fit.measures=TRUE,standardized=TRUE)
+semPaths(fit,intercepts = FALSE,whatLabels = "stand",rotation=2)
+```

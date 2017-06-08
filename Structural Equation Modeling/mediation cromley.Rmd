@@ -1,0 +1,48 @@
+---
+title: "Mediational Models and Bootstrapping"
+author: "Andrew L. Stewart"
+date: "June 7, 2017"
+output:
+  pdf_document: default
+  html_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Read in the data
+
+```{r}
+cromley.dat <- read.table("./Cromley2017.dat", header=T)
+library(lavaan)
+```
+
+# Specify the model
+
+```{r}
+model <- '#direct effect
+          comprehension ~ a*reading + b*vocab +c*inference
+
+          #mediator
+          inference ~ d*reading + e*vocab
+          
+          #correlation
+          reading~~vocab
+
+          #indirect effect
+          dc := d*c
+          ec := e*c
+
+          #total effect
+          total := a+b+(d*c)+(e*c)
+'
+```
+
+# Fit the model
+
+```{r}
+fit <- sem(model,se="bootstrap",bootstrap=5000,standardize=TRUE,data=cromley.dat)
+summary(fit)
+parameterEstimates(fit,boot.ci.type = "perc",standardized = TRUE)
+```
