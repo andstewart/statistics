@@ -4,7 +4,6 @@ author: "Andrew L. Stewart"
 date: "June 8, 2017"
 output:
   html_document: default
-  word_document: default
 ---
 
 ```{r setup, include=FALSE}
@@ -13,7 +12,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 # Read the data
 ```{r}
-multigroup.dat <- read.table("C:/Users/NeagStats22/Desktop/DATIC SEM 2017/Student Files DATIC SEM 2017/Day 4/HMK4/HMK_MGCFA.dat")
+multigroup.dat <- read.table("./HMK_MGCFA.dat")
 names(multigroup.dat)<-c("math1","math2","math3","read1","read2","read3","iq","selfreg","value","gender")
 attach(multigroup.dat)
 library(lavaan)
@@ -33,9 +32,23 @@ library(semPlot)
 '
 ```
 
-# Fit the model
+#Fit the configural invariance model
 ```{r}
-fit<-cfa(model,meanstructure=TRUE,group="gender",group.equal="loadings",data=multigroup.dat)
+fit<-cfa(model,meanstructure=TRUE,group="gender",data=multigroup.dat)
+summary(fit,fit.measures=TRUE,standardized=TRUE)
+semPaths(fit,intercepts = FALSE,whatLabels = "stand",rotation=2)
+```
+
+#Fit the metric invariance model
+```{r}
+fit<-cfa(model,meanstructure=TRUE,group="gender",group.equal=c("loadings"),data=multigroup.dat)
+summary(fit,fit.measures=TRUE,standardized=TRUE)
+semPaths(fit,intercepts = FALSE,whatLabels = "stand",rotation=2)
+```
+
+# Fit the scalar invariance model
+```{r}
+fit<-cfa(model,meanstructure=TRUE,group="gender",group.equal=c("loadings","intercepts"),data=multigroup.dat)
 summary(fit,fit.measures=TRUE,standardized=TRUE)
 semPaths(fit,intercepts = FALSE,whatLabels = "stand",rotation=2)
 ```
