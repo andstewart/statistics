@@ -28,6 +28,7 @@ To test if experts are susceptible to overclaiming, Atir, Rosenzweig, and Dunnin
 
 4. You next want to determine whether there is an order effect (based on whether participants completed the self-perceived knowledge measure first, or the overclaiming task first. Compare the mean level of overclaiming based on the order of the tasks.
 
+<<<<<<< HEAD
 5. If you found a significant difference in overclaiming in the analysis above (#4), re-perform the analysis from #3 to check to see if the relationship between self-perceived knowledge and overclaiming changes, when taking into account the order of the tasks. To do this, add the interaction between self-perceived knowledge and the order of tasks to the regression model (predictors of overclaiming include self-perceived knowledge, accuracy, order of tasks, and the interaction between self-perceived knowledge and order of tasks), and test whether the interaction is statistically significant. Did the order of tasks change the relationship between self-perceived knowledge and overclaiming?
 
 6. You next want to determine if the self-perceived knowledge still predicts overclaiming while accounting for the variance due to genuine expertise, as measured by the FINRA. First, find the mean and standard deviation for scores on the FINRA. Then, re-perform the analysis from #3, but this time include scores on the FINRA as an additional predictor variable.
@@ -35,4 +36,13 @@ To test if experts are susceptible to overclaiming, Atir, Rosenzweig, and Dunnin
 7. Prepare an APA-style results section for the analyses you completed, including (a) a full interpretation of the final model you estimated in #6, (b) a discussion of the interaction in #5,  (c) an APA-style table of means, standard deviations, and correlations among all variables, (d) a scatterplot displaying two different regression lines for the order of tasks, and (e) all SPSS output.
 
 ## DUE: April 28, 2017 at 3PM
+=======
+5. If you found a significant difference in overclaiming in the analysis above (#4), re-perform the analysis from #3 to check to see if the relationship between self-perceived knowledge and overclaiming changes, when taking into account the order of the tasks. To do this, use the split file function, splitting the file based on order condition, before re-performing the analyses from #3. After you have performed the analyses, make sure to turn split file off.
+
+6. You next want to determine if the self-perceived knowledge still predicts overclaiming while accounting for the variance due to genuine expertise, as measured by the FINRA. First, find the mean and standard deviation for scores on the FINRA. Then, re-perform the analysis from #3, but this time include scores on the FINRA as an additional predictor variable.
+
+7. Prepare an APA-style results section for the analyses you completed.
+
+## DUE: April 21, 2017 at 3PM
+>>>>>>> c736714f4ed6bec24beb512a389f76cab3b6c6f0
 ### Upload your APA style results section and any requested tables/figures, along with your output in one file to Moodle.
