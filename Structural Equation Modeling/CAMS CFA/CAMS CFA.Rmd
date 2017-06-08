@@ -1,0 +1,35 @@
+---
+title: "cam CFA"
+author: "Andrew L. Stewart"
+date: "6/8/2017"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Read in the data
+
+```{r}
+cam.dat <- read.csv("~/Documents/statistics/Structural Equation Modeling/CAMS CFA/CAMS 1 Expanded.csv",header=T,na.strings = "NA")
+library(lavaan)
+```
+
+# Specify the three factor measurement model
+
+```{r}
+threefactor.model<-'
+        #specify the latent variables
+        cam_aware =~ cam1+cam4+cam7+cam10+cam13+cam16+cam19+cam22+cam25+cam28+cam31
+        cam_problem =~ cam2+cam5+cam8+cam11+cam14+cam17+cam20+cam23+cam26+cam29+cam32
+        cam_act =~ cam3+cam6+cam9+cam12+cam15+cam18+cam21+cam24+cam27+cam30+cam33
+'
+```
+
+# Fit the three factor model
+
+```{r}
+threefactor.fit <- cfa(threefactor.model,fit.measures=TRUE,standardized=TRUE)
+summary(threefactor.fit)
+```
