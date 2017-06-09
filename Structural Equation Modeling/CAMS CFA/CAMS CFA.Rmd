@@ -19,17 +19,54 @@ library(lavaan)
 # Specify the three factor measurement model
 
 ```{r}
-threefactor.model<-'
+model<-'
         #specify the latent variables
         cam_aware =~ cam1+cam4+cam7+cam10+cam13+cam16+cam19+cam22+cam25+cam28+cam31
         cam_problem =~ cam2+cam5+cam8+cam11+cam14+cam17+cam20+cam23+cam26+cam29+cam32
         cam_act =~ cam3+cam6+cam9+cam12+cam15+cam18+cam21+cam24+cam27+cam30+cam33
+       
+        #error covariances
+        cam1~~cam2
+        cam1~~cam3
+        cam2~~cam3
+        cam4~~cam5
+        cam4~~cam6
+        cam5~~cam6
+        cam7~~cam8
+        cam7~~cam9
+        cam8~~cam9
+        cam10~~cam11
+        cam10~~cam12
+        cam11~~cam12
+        cam13~~cam14
+        cam13~~cam15
+        cam14~~cam15
+        cam16~~cam17
+        cam16~~cam18
+        cam17~~cam18
+        cam19~~cam20
+        cam19~~cam21
+        cam20~~cam21
+        cam22~~cam23
+        cam22~~cam24
+        cam23~~cam24
+        cam25~~cam26
+        cam25~~cam27
+        cam26~~cam27
+        cam28~~cam29
+        cam28~~cam30
+        cam29~~cam30
+        cam31~~cam32
+        cam31~~cam33
+        cam32~~cam33
+        
 '
 ```
 
 # Fit the three factor model
 
 ```{r}
-threefactor.fit <- cfa(threefactor.model,fit.measures=TRUE,standardized=TRUE)
-summary(threefactor.fit)
+fit <- cfa(model,data=cam.dat)
+summary(fit,fit.measures=TRUE,standardized=TRUE)
+modindices(fit)
 ```
